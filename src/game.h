@@ -19,6 +19,20 @@ private:
 	sf::VideoMode VideoMode;
 	sf::Event ev;
 
+	sf::Texture grasstxt;
+	sf::Sprite grasssprt;
+	/*
+	sf::Texture gophertxt;
+	sf::Sprite gophersprt;
+	sf::Texture gopherhittxt;
+	sf::Sprite gopherhitsprt;
+	sf::Texture steakplctxt;
+	sf::Sprite steakplcsprt;
+	sf::Texture steaktxt;
+	sf::Sprite steaksprt;
+	sf::Texture hammertxt;
+	sf::Sprite hammersprt;
+*/
 	//private functions
 	void initVariables();
 	void initWindow();

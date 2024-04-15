@@ -6,6 +6,10 @@
 void Game::initVariables()
 {
     this->window = nullptr;
+    
+    this->grasstxt.loadFromFile("./grass.png");
+    this->grasssprt.setTexture(grasstxt);
+    grasssprt.setScale(4.0f, 4.0f);
 
 }
 
@@ -68,10 +72,13 @@ void Game::render()
            renders the game objects
     */
 
-    this->window->clear(sf::Color(255, 0, 0, 255));
+
+    this->window->clear();
 
       //draw game objects
-
+    this->window->draw(grasssprt);
+    
+    
     this->window->display();
 
 }
