@@ -1,21 +1,27 @@
-#include <SFML/Graphics.hpp>
+
+#include "game.h"
+#include <iomanip>
+#include <fstream>
+#include <iostream>
+
+using namespace sf;
+using namespace std;
 
 int main()
 {
-    auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
-    window.setFramerateLimit(144);
+// init game engine
+    Game game;
 
-    while (window.isOpen())
+   
+    //game loop
+    while (game.running())
     {
-        for (auto event = sf::Event{}; window.pollEvent(event);)
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
+        //update 
+        game.update();
 
-        window.clear();
-        window.display();
+        //render
+        game.render();
     }
+
+    return 0;
 }
